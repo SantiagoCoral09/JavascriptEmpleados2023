@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Sistema de Empleados</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+<br>
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título del Modal</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Contenido del modal...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+  <div class="container cont">
+    <div>
+      <p> Datos Personales
+      <p>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4">
+            <div class="card">
+              <div>
+                <p> Nombre:
+                <p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="form-outline">
+                <input type="text" id="nombre" class="form-control" />
+                <label class="form-label" for="nombre">Ingrese Nombre</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-2"></div>
+
+          <div class="col-4">
+            <div class="card">
+              <div class="pl-5">
+                <label for="apellido">Apellido</label>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="form-outline">
+                <input type="text" id="apellido" class="form-control" />
+                <label class="form-label" for="apellido">Ingrese Apellido</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-2"></div>
+
+          <div class="col-4">
+            <div class="card">
+              <div>
+                <p> Sexo:
+                <p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <select id="genero" name="" class="selecc">
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4">
+            <div class="card">
+              <div>
+                <p> Fecha de Nacimiento:
+                <p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="">
+                <input type="date" id="fecha_nacimiento" class="selecc" max=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4">
+            <div class="card">
+              <div>
+                <p> Fecha de Ingreso:
+                <p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="">
+                <input type="date" id="fecha_ingreso" class="selecc" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4">
+            <div class="card">
+              <div>
+                <p> Imagen:
+                <p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="">
+                <input type="file" id="imagen" class="selecc" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-3">
+        <div class="card" id="imagenDiv">
+          <img src="img/perfil.png" alt="Fissure in Sandstone" />
+        </div>
+      </div>
+    </div>
+
+  </div><br>
+  <div class="container cont">
+
+    <div>
+      <p> Salario
+      <p>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-3">
+        <div class="card">
+          <div>
+            <p> Salario:
+            <p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <div class="input-group">
+            <input type="number" id="salario" class="form-control" placeholder="Ingrese Salario" aria-label="Ingrese su Salario"
+              aria-describedby="button-addon2" />
+            <button class="btn btn-outline-primary" type="button" id="button-addon2" data-mdb-ripple-color="dark" onclick="modificar()">
+              Modificar
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <div class="container cont">
+    <div>
+      <p> Cálculo
+      <p>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-5">
+        <div class="card">
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-primary" type="button" id="button-addon1" data-mdb-ripple-color="dark" onmouseover="showHelp()" onmouseout="hideHelp()">
+              Calcular Edad
+            </button>
+            <span id="help"></span>
+            <input type="text" id="edad" readonly class="form-control" placeholder="" aria-label="Example text with button addon"
+              aria-describedby="button-addon1" />
+          </div>
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-primary" type="button" id="button-addon1" data-mdb-ripple-color="dark">
+              Calcular Antiguedad
+            </button>
+            <input type="text" id="antiguedad" readonly class="form-control" placeholder="" aria-label="Example text with button addon"
+              aria-describedby="button-addon1" />
+          </div>
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-primary" type="button" id="button-addon1" data-mdb-ripple-color="dark">
+              Calcular Prestaciones
+            </button>
+            <input type="text" id="prestaciones" readonly class="form-control" placeholder="" aria-label="Example text with button addon"
+              aria-describedby="button-addon1" />
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div><br>
+  <div class="container cont">
+    <div>
+      <p> Puntos de Extensìon
+      <p>
+    </div>
+
+    <div class="input-group  d-flex justify-content-center">
+
+      <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#myModal">
+        Opción 1
+      </button>
+      <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
+        Opción 2
+      </button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ----------------------------------------------- -->
+
+
+
+
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="./js/empleado.js"></script>
+</body>
+
+</html>
